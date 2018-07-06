@@ -14,13 +14,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        // Head
         BodyPartFragment headFragment = new BodyPartFragment();
         headFragment.setImageIds(ImageAssets.getHeads());
         headFragment.setListIndex(5);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.head_container, headFragment)
+                .commit();
+
+        // Body
+        BodyPartFragment bodyFragment = new BodyPartFragment();
+        bodyFragment.setImageIds(ImageAssets.getBodies());
+        bodyFragment.setListIndex(5);
+
+        fragmentManager.beginTransaction()
+                .add(R.id.body_container, bodyFragment)
+                .commit();
+
+        // Leg
+        BodyPartFragment legFragment = new BodyPartFragment();
+        legFragment.setImageIds(ImageAssets.getLegs());
+        legFragment.setListIndex(5);
+
+        fragmentManager.beginTransaction()
+                .add(R.id.leg_container, legFragment)
                 .commit();
     }
 }
