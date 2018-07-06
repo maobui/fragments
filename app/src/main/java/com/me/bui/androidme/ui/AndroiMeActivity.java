@@ -7,12 +7,12 @@ import android.os.Bundle;
 import com.me.bui.androidme.R;
 import com.me.bui.androidme.data.ImageAssets;
 
-public class MainActivity extends AppCompatActivity {
+public class AndroiMeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_android_me);
 
         if (savedInstanceState == null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
