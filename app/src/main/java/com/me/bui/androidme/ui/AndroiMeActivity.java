@@ -20,7 +20,7 @@ public class AndroiMeActivity extends AppCompatActivity {
             // Head
             BodyPartFragment headFragment = new BodyPartFragment();
             headFragment.setImageIds(ImageAssets.getHeads());
-            headFragment.setListIndex(5);
+            headFragment.setListIndex(getIntent().getIntExtra("headIndex" , 0));
 
             fragmentManager.beginTransaction()
                     .add(R.id.head_container, headFragment)
@@ -29,7 +29,7 @@ public class AndroiMeActivity extends AppCompatActivity {
             // Body
             BodyPartFragment bodyFragment = new BodyPartFragment();
             bodyFragment.setImageIds(ImageAssets.getBodies());
-            bodyFragment.setListIndex(5);
+            bodyFragment.setListIndex(getIntent().getIntExtra("bodyIndex" , 0));
 
             fragmentManager.beginTransaction()
                     .add(R.id.body_container, bodyFragment)
@@ -38,7 +38,7 @@ public class AndroiMeActivity extends AppCompatActivity {
             // Leg
             BodyPartFragment legFragment = new BodyPartFragment();
             legFragment.setImageIds(ImageAssets.getLegs());
-            legFragment.setListIndex(5);
+            legFragment.setListIndex(getIntent().getIntExtra("legIndex" , 0));
 
             fragmentManager.beginTransaction()
                     .add(R.id.leg_container, legFragment)
