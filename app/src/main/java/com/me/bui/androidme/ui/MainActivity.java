@@ -5,12 +5,12 @@ import android.os.Bundle;
 
 import com.me.bui.androidme.R;
 
-public class MasterListActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_master_list);
+        setContentView(R.layout.activity_main);
 
 
     }
